@@ -1,0 +1,304 @@
+/* ============================================================
+   BLOOMSBURY ASSOCIATES — RESPONSIVE STYLES
+   Breakpoints:
+     Wide    : max-width 1280px  (large laptop)
+     Tablet  : max-width 1024px  (small laptop / tablet landscape)
+     Mobile  : max-width 768px   (tablet portrait / phone)
+     Sm phone: max-width 480px
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   HAMBURGER NAV
+   ---------------------------------------------------------- */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200}
+.ham span{display:block;width:22px;height:1.5px;background:#fff;transition:all .25s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.ndrawer{
+  display:none;
+  position:fixed;top:68px;left:0;right:0;bottom:0;
+  background:var(--bd);
+  padding:40px 28px;
+  flex-direction:column;
+  gap:0;
+  z-index:150;
+  overflow-y:auto;
+  border-top:.5px solid rgba(255,255,255,.08);
+}
+.ndrawer.open{display:flex}
+.ndrawer a{
+  display:block;
+  color:rgba(255,255,255,.75);
+  text-decoration:none;
+  font-size:18px;
+  font-family:var(--serif);
+  font-weight:400;
+  padding:16px 0;
+  border-bottom:.5px solid rgba(255,255,255,.07);
+  transition:color .2s;
+}
+.ndrawer a:hover,.ndrawer a.act{color:#fff}
+.ndrawer .nc{
+  display:inline-block;
+  margin-top:28px;
+  background:var(--or);
+  color:#fff;
+  padding:14px 28px;
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  border-radius:2px;
+  text-decoration:none;
+  border:none;
+}
+.ndrawer .nph{
+  display:block;
+  font-size:13px;
+  color:rgba(255,255,255,.35);
+  margin-top:16px;
+}
+
+
+/* ============================================================
+   WIDE  (≤ 1280px) — large laptops, gentle reduction
+   ============================================================ */
+@media(max-width:1280px){
+
+  /* Reduce section side padding */
+  .sec,.wsec,.tsec,.ctasec,.svsec-light,
+  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec{
+    padding-left:56px !important;
+    padding-right:56px !important;
+  }
+  footer{padding-left:56px;padding-right:56px}
+  .fbot{padding-left:56px;padding-right:56px}
+  .tb{padding-left:56px;padding-right:56px}
+  .snav{padding-left:56px}
+
+  /* Trust bar: shrink text slightly so 5 items fit on one row */
+  .ti{font-size:13px;padding:16px 20px}
+
+  /* Footer: 5-col gets tight — drop newsletter below */
+  footer{grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
+  .fn-signup{grid-column:1/-1;border-left:none;border-top:.5px solid rgba(255,255,255,.08);padding-left:0;padding-top:24px;display:flex;align-items:center;gap:40px}
+  .fn-signup .fn-sub{margin-bottom:0}
+  .fn-row{min-width:280px}
+}
+
+
+/* ============================================================
+   TABLET  (≤ 1024px) — small laptop / tablet landscape
+   ============================================================ */
+@media(max-width:1024px){
+
+  /* NAV */
+  nav{padding:0 32px}
+  .nm,.nr .nph{display:none}
+  .ham{display:flex}
+  .nr{gap:12px}
+
+  /* HERO (homepage) — stack vertically */
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .ht{padding:64px 40px 52px}
+  .hv{min-height:320px;position:relative}
+  .hv img{min-height:320px !important}
+
+  /* Trust bar — allow wrap gracefully */
+  .tb{padding:0 32px;flex-wrap:wrap}
+  .ti{font-size:12px;padding:12px 16px;border-right:.5px solid rgba(255,255,255,.08)}
+
+  /* PAGE HERO (inner pages) */
+  .phero{padding:56px 40px 48px;grid-template-columns:1fr !important;min-height:auto}
+  .phero-img{display:none}
+
+  /* SECTION PADDING */
+  .sec,.wsec,.tsec,.ctasec,.teamsec,
+  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec{
+    padding-left:40px !important;
+    padding-right:40px !important;
+  }
+  footer{padding-left:40px;padding-right:40px;grid-template-columns:1fr 1fr 1fr;gap:28px}
+  .fbot{padding-left:40px;padding-right:40px}
+  .snav{padding-left:40px}
+  .blog-wrap,.blog-signup,.nl-cta{padding-left:40px !important;padding-right:40px !important}
+  footer>div:first-child{grid-column:1/-1}
+  .fn-signup{grid-column:1/-1;border-left:none;border-top:.5px solid rgba(255,255,255,.08);padding-left:0;padding-top:20px;flex-direction:column;align-items:flex-start;gap:12px}
+  .fn-row{width:100%;max-width:380px}
+
+  /* HOMEPAGE GRIDS */
+  .pgrid{grid-template-columns:1fr 1fr}
+  .wsec{grid-template-columns:1fr;gap:48px}
+  .ctasec{grid-template-columns:1fr;gap:48px}
+  .nlinner{grid-template-columns:1fr;gap:48px}
+
+  /* ABOUT */
+  .origin{grid-template-columns:1fr;gap:48px}
+  .tgrid{grid-template-columns:1fr}
+  .cefex-sec{grid-template-columns:1fr;gap:48px}
+  .ext-grid{grid-template-columns:1fr 1fr}
+
+  /* WHAT WE DO */
+  .steps{grid-template-columns:1fr 1fr 1fr}
+  .steps::before{display:none}
+  .step{border-top:1px dashed var(--gm);padding-top:24px}
+  .svc-inner{grid-template-columns:1fr;gap:40px}
+  .svc-inner.rev{direction:ltr}
+  .egrid{grid-template-columns:1fr 1fr 1fr}
+
+  /* OUR CLIENTS */
+  .sgrid{grid-template-columns:1fr 1fr}
+
+  /* BLOG */
+  .feat-post{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .nl-cta{grid-template-columns:1fr;gap:28px}
+  .bsu-inner{grid-template-columns:1fr;gap:20px}
+
+  /* CONTACT */
+  .contact-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+}
+
+
+/* ============================================================
+   MOBILE  (≤ 768px)
+   ============================================================ */
+@media(max-width:768px){
+
+  /* NAV */
+  nav{padding:0 20px;height:60px}
+  .ndrawer{top:60px}
+  .nl{font-size:18px}
+
+  /* HERO */
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .ht{padding:52px 20px 44px}
+  .hh1{font-size:40px !important}
+  .hsub{font-size:15px;margin-bottom:28px}
+  .hact{flex-direction:column;align-items:stretch;gap:10px}
+  .hact .bp,.hact .bg{text-align:center}
+  .hv{display:none}
+
+  /* TRUST BAR — 2 column grid */
+  .tb{padding:0 20px;display:grid;grid-template-columns:1fr 1fr}
+  .ti{font-size:11px;font-weight:500;padding:12px 8px 12px 0;border-right:none;border-bottom:.5px solid rgba(255,255,255,.08);width:auto}
+  .ti:nth-child(odd){border-right:.5px solid rgba(255,255,255,.08);padding-right:12px}
+  .ti:nth-last-child(-n+2){border-bottom:none}
+  /* 5th item spans full width */
+  .ti:last-child{grid-column:1/-1;border-right:none}
+
+  /* PAGE HERO */
+  .phero{padding:44px 20px 36px !important}
+  .phero h1{font-size:38px !important}
+  .phero p{font-size:15px}
+
+  /* SECTION PADDING */
+  .sec,.wsec,.tsec,.ctasec,
+  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec{
+    padding:52px 20px !important;
+  }
+  .blog-wrap{padding:44px 20px !important}
+  .blog-signup{padding:20px !important}
+  .nl-cta{padding:44px 20px !important}
+  footer{padding:44px 20px 28px;grid-template-columns:1fr 1fr;gap:24px}
+  .fbot{padding:14px 20px;flex-direction:column;gap:6px;text-align:center}
+  .snav{padding:0 20px}
+  footer>div:first-child{grid-column:1/-1}
+  .fn-signup{grid-column:1/-1;border-left:none;border-top:.5px solid rgba(255,255,255,.08);padding-left:0;padding-top:20px}
+  .fn-row{width:100%}
+
+  /* HOMEPAGE GRIDS */
+  .pgrid{grid-template-columns:1fr}
+  .wsec{grid-template-columns:1fr;gap:40px;padding:52px 20px !important}
+  .ctasec{grid-template-columns:1fr;gap:32px;padding:56px 20px !important}
+
+  /* CTA FORM */
+  .cform{padding:28px 20px}
+
+  /* ABOUT */
+  .origin{grid-template-columns:1fr;gap:32px;padding:52px 20px !important}
+  .stats{gap:2px}
+  .tgrid{grid-template-columns:1fr;gap:2px}
+  .tm{grid-template-columns:64px 1fr;gap:20px;padding:24px 20px}
+  .tphoto{width:64px;height:64px}
+  .cefex-sec{grid-template-columns:1fr;gap:32px;padding:52px 20px !important}
+  .cpillars{gap:2px}
+  .ext-grid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr 1fr}
+
+  /* WHAT WE DO */
+  .steps{grid-template-columns:1fr 1fr;gap:20px}
+  .svc-inner{grid-template-columns:1fr;gap:32px}
+  .svc-inner.rev{direction:ltr}
+  .egrid{grid-template-columns:1fr}
+  .snav{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sni{padding:14px 14px;font-size:12px}
+  .process-band{padding:44px 20px !important}
+
+  /* OUR CLIENTS */
+  .sgrid{grid-template-columns:1fr}
+  .tcard{padding:24px 20px}
+
+  /* BLOG */
+  .feat-post{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .nl-cta{grid-template-columns:1fr;gap:20px}
+  .bsu-inner{grid-template-columns:1fr;gap:12px}
+  .blog-cats{flex-wrap:wrap;gap:4px}
+
+  /* CONTACT */
+  .contact-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr}
+  .promise-bar{padding:16px 20px;gap:12px}
+
+  /* GENERAL */
+  .slead{margin-bottom:28px}
+  .cta-band{padding:52px 20px !important;text-align:left}
+  .cta-band p{margin-left:0}
+}
+
+
+/* ============================================================
+   SMALL PHONE  (≤ 480px)
+   ============================================================ */
+@media(max-width:480px){
+
+  /* HERO */
+  .hh1{font-size:34px !important}
+  .ht{padding:44px 16px 40px}
+  .phero{padding:40px 16px 32px !important}
+  .phero h1{font-size:32px !important}
+
+  /* NAV */
+  .nl{font-size:16px}
+  .nr .nc{padding:8px 12px;font-size:11px;letter-spacing:.02em}
+
+  /* TRUST BAR — single column */
+  .tb{display:flex;flex-direction:column;padding:0 16px}
+  .ti{width:100%;padding:10px 0;border-right:none;border-bottom:.5px solid rgba(255,255,255,.07);font-size:11px}
+  .ti:last-child{border-bottom:none}
+
+  /* GRIDS */
+  .pgrid{grid-template-columns:1fr}
+  .ext-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .egrid{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr}
+  .fn-signup{padding-top:16px}
+
+  /* TEAM */
+  .tm{grid-template-columns:1fr}
+  .tphoto,.tav-fb{margin-bottom:12px}
+
+  /* MISC */
+  .fbot{font-size:10px}
+  .svnum{font-size:64px}
+  .cform{padding:24px 16px}
+}
