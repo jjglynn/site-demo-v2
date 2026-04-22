@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savings Calculators — Bloomsbury Associates</title>
+  <meta name="description" content="Future balance or time to a savings goal. Illustrative only; not financial advice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site-chrome.css" />
+  <link rel="stylesheet" href="bloomsbury-calc.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <a href="#main" class="bb-skip-link">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nl">Bloomsbury <em>Associates</em></a>
+    <ul class="nm">
+      <li><a href="what-we-do.html">What we do</a></li>
+      <li><a href="our-clients.html">Our clients</a></li>
+      <li><a href="about-us.html">About us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="has-drop">
+        <a href="blog.html" class="act">Resources</a>
+        <div class="dropdown">
+          <a href="tools.html">Tools</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+        </div>
+      </li>
+    </ul>
+    <div class="nr">
+      <button class="ham" aria-label="Open menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+      <span class="nph">+64 4 499 6979</span>
+      <a href="index.html#form" class="nc">Free consultation</a>
+    </div>
+  </nav>
+  <div class="ndrawer" id="ndrawer">
+    <a href="what-we-do.html">What we do</a>
+    <a href="our-clients.html">Our clients</a>
+    <a href="about-us.html">About us</a>
+    <a href="contact.html">Contact</a>
+    <a href="tools.html" class="act">Tools</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+    <a href="index.html#form" class="nc">Free consultation</a>
+    <span class="nph">+64 4 499 6979</span>
+  </div>
+
+  <div class="phero">
+    <p class="pbread"><a href="index.html">Home</a> / <a href="blog.html">Resources</a> / <a href="tools.html">Tools</a> / Savings calculators</p>
+    <h1>Savings <em>calculators</em></h1>
+    <p>Project a future balance or time to a goal. Illustrative outputs only — not a substitute for financial advice.</p>
+  </div>
+
+  <div class="calc-band">
+    <main class="bb-shell" id="main">
+      <div class="bb-tabs" role="tablist" aria-label="Calculator mode">
+        <button type="button" class="bb-tab" role="tab" id="tab-fv" aria-selected="true" aria-controls="panel-fv" tabindex="0">Future balance</button>
+        <button type="button" class="bb-tab" role="tab" id="tab-time" aria-selected="false" aria-controls="panel-time" tabindex="-1">Time to goal</button>
+      </div>
+
+      <div id="panel-fv" class="bb-panel" role="tabpanel" aria-labelledby="tab-fv">
+        <div class="bb-calc-layout">
+          <div class="bb-calc-inputs">
+            <div class="bb-card">
+              <h2>Inputs</h2>
+              <div class="bb-grid">
+                <div class="bb-field">
+                  <label for="g_pv">Initial investment ($)</label>
+                  <input id="g_pv" type="number" inputmode="decimal" min="0" step="100" value="25000" />
+                </div>
+                <div class="bb-field">
+                  <label for="g_pmt">Monthly contribution ($)</label>
+                  <input id="g_pmt" type="number" inputmode="decimal" min="0" step="50" value="500" />
+                </div>
+                <div class="bb-field">
+                  <label for="g_r">Expected annual return %</label>
+                  <input id="g_r" type="number" inputmode="decimal" step="0.1" value="5" />
+                </div>
+                <div class="bb-field">
+                  <label for="g_y">Time horizon (years)</label>
+                  <input id="g_y" type="number" inputmode="decimal" min="0" step="1" value="20" />
+                </div>
+              </div>
+              <div class="bb-actions">
+                <button type="button" class="bb-btn bb-btn--primary" id="btn-fv">Generate results</button>
+                <button type="button" class="bb-btn bb-btn--print bb-no-print" id="btn-print-fv" aria-label="Print this page">Print summary</button>
+              </div>
+            </div>
+          </div>
+          <div class="bb-calc-results-wrap">
+            <div id="out-fv" class="bb-results" hidden aria-live="polite" aria-atomic="true">
+              <h3>Projected balance</h3>
+              <div class="bb-kpi" id="fv-balance"></div>
+              <div class="bb-row-kpis">
+                <div class="bb-kpi" id="fv-contrib"></div>
+                <div class="bb-kpi" id="fv-growth"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-time" class="bb-panel" hidden role="tabpanel" aria-labelledby="tab-time">
+        <div class="bb-calc-layout">
+          <div class="bb-calc-inputs">
+            <div class="bb-card">
+              <h2>Inputs</h2>
+              <div class="bb-grid">
+                <div class="bb-field">
+                  <label for="t_goal">Portfolio goal ($)</label>
+                  <input id="t_goal" type="number" inputmode="decimal" min="0" step="1000" value="500000" />
+                </div>
+                <div class="bb-field">
+                  <label for="t_pv">Initial investment ($)</label>
+                  <input id="t_pv" type="number" inputmode="decimal" min="0" step="100" value="10000" />
+                </div>
+                <div class="bb-field">
+                  <label for="t_pmt">Monthly contribution ($)</label>
+                  <input id="t_pmt" type="number" inputmode="decimal" min="0" step="50" value="800" />
+                </div>
+                <div class="bb-field">
+                  <label for="t_r">Expected annual return %</label>
+                  <input id="t_r" type="number" inputmode="decimal" step="0.1" value="5" />
+                </div>
+              </div>
+              <div class="bb-actions">
+                <button type="button" class="bb-btn bb-btn--primary" id="btn-time">Generate results</button>
+                <button type="button" class="bb-btn bb-btn--print bb-no-print" id="btn-print-time" aria-label="Print this page">Print summary</button>
+              </div>
+            </div>
+          </div>
+          <div class="bb-calc-results-wrap">
+            <div id="out-time" class="bb-results" hidden aria-live="polite" aria-atomic="true">
+              <h3>Time to reach goal</h3>
+              <div class="bb-kpi" id="time-answer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-bb-trust-mount="1"></div>
+
+      <p class="bb-foot">
+        <a href="https://bloomsbury.co.nz/">bloomsbury.co.nz</a> · Wellington, New Zealand
+      </p>
+    </main>
+  </div>
+
+  <footer>
+    <div><p class="fwm">Bloomsbury <em>Associates</em></p><p class="ftag">Wellbeing through wealth management</p><p class="fdesc">Wellington's only CEFEX-certified financial advisory practice — serving individuals, families and charities across New Zealand since 2009.</p></div>
+    <div class="fn-signup">
+      <p class="fn-head">Stay Informed</p>
+      <p class="fn-sub">Get our regular insights — unsubscribe any time.</p>
+      <div class="fn-row">
+        <input class="fn-f" type="email" placeholder="Email address" />
+        <button class="fn-btn" onclick="this.textContent='✓';this.style.background='#2a6e3a';this.disabled=true">Subscribe</button>
+      </div>
+    </div>
+    <div class="fcol"><h4>What we do</h4><ul><li><a href="what-we-do.html#fp">Financial planning</a></li><li><a href="what-we-do.html#wm">Wealth management</a></li><li><a href="what-we-do.html#philanthropy">Philanthropic giving</a></li><li><a href="what-we-do.html#ethical">Ethical investing</a></li></ul></div>
+    <div class="fcol"><h4>Our clients</h4><ul><li><a href="our-clients.html">Real stories</a></li><li><a href="our-clients.html#testimonials">Testimonials</a></li><li><a href="index.html#form">Initial consultation</a></li><li><a href="contact.html#newsletter">Newsletter</a></li></ul></div>
+    <div class="fcol"><h4>Company</h4><ul><li><a href="about-us.html">About us</a></li><li><a href="about-us.html#cefex">CEFEX certification</a></li><li><a href="blog.html">Resources</a></li><li><a href="#">Disclosure statement</a></li></ul></div>
+  </footer>
+  <div class="fbot"><p>© Bloomsbury Associates 2026. All rights reserved.</p><p><a href="#">Financial Advice Provider</a> · <a href="#">Disclosure Statement</a> · <a href="#">Terms &amp; Conditions</a></p></div>
+
+  <script src="email-gate.js"></script>
+  <script src="trust-mount.js"></script>
+  <script>
+    (function () {
+      var PAGE_ID = 'savings-investment';
+
+      function nz(n) {
+        var x = Number(n);
+        if (!isFinite(x)) return '—';
+        return x.toLocaleString('en-NZ', { maximumFractionDigits: 0 });
+      }
+
+      function nzDec(n, d) {
+        var x = Number(n);
+        if (!isFinite(x)) return '—';
+        return x.toLocaleString('en-NZ', { minimumFractionDigits: d, maximumFractionDigits: d });
+      }
+
+      function fvMonthly(pv, pmt, annualRate, years) {
+        var n = Math.max(0, Math.round(Number(years) * 12));
+        if (n === 0) return Number(pv) || 0;
+        var i = Math.pow(1 + Number(annualRate), 1 / 12) - 1;
+        var p = Number(pv) || 0;
+        var m = Number(pmt) || 0;
+        if (Math.abs(i) < 1e-12) return p + m * n;
+        return p * Math.pow(1 + i, n) + m * ((Math.pow(1 + i, n) - 1) / i);
+      }
+
+      function fvAtMonthN(pv, pmt, annualRate, nMonths) {
+        var n = Math.max(0, Math.round(nMonths));
+        var i = Math.pow(1 + Number(annualRate), 1 / 12) - 1;
+        var p = Number(pv) || 0;
+        var m = Number(pmt) || 0;
+        if (Math.abs(i) < 1e-12) return p + m * n;
+        return p * Math.pow(1 + i, n) + m * ((Math.pow(1 + i, n) - 1) / i);
+      }
+
+      function formatYearsMonths(totalMonths) {
+        var mo = Math.max(0, Math.round(Number(totalMonths)) || 0);
+        var y = Math.floor(mo / 12);
+        var m = mo % 12;
+        var parts = [];
+        if (y > 0) parts.push(y + (y === 1 ? ' year' : ' years'));
+        if (m > 0) parts.push(m + (m === 1 ? ' month' : ' months'));
+        if (!parts.length) return '0 months';
+        return parts.join(' ');
+      }
+
+      function monthsToReachGoal(goal, pv, pmt, annualRate) {
+        var g = Number(goal);
+        if (!isFinite(g) || g <= 0) return null;
+        var cap = 12 * 120;
+        var f0 = fvAtMonthN(pv, pmt, annualRate, 0);
+        if (f0 >= g - 0.01) return 0;
+        if (fvAtMonthN(pv, pmt, annualRate, cap) < g - 0.01) return null;
+        var lo = 0;
+        var hi = cap;
+        while (lo < hi) {
+          var mid = Math.floor((lo + hi) / 2);
+          if (fvAtMonthN(pv, pmt, annualRate, mid) >= g - 0.01) hi = mid;
+          else lo = mid + 1;
+        }
+        return lo;
+      }
+
+      function runFv() {
+        var pv = parseFloat(document.getElementById('g_pv').value) || 0;
+        var pmt = parseFloat(document.getElementById('g_pmt').value) || 0;
+        var r = (parseFloat(document.getElementById('g_r').value) || 0) / 100;
+        var y = parseFloat(document.getElementById('g_y').value) || 0;
+        var fv = fvMonthly(pv, pmt, r, y);
+        var contributed = pv + pmt * 12 * y;
+        var growth = fv - contributed;
+
+        document.getElementById('fv-balance').innerHTML =
+          '$' + nz(fv) + '<small>After ' + nzDec(y, 1) + ' years (illustrative).</small>';
+        document.getElementById('fv-contrib').innerHTML =
+          '$' + nz(contributed) + '<small>Paid in</small>';
+        document.getElementById('fv-growth').innerHTML =
+          '$' + nz(growth) + '<small>Growth</small>';
+        document.getElementById('out-fv').hidden = false;
+      }
+
+      function runTime() {
+        var goal = parseFloat(document.getElementById('t_goal').value) || 0;
+        var pv = parseFloat(document.getElementById('t_pv').value) || 0;
+        var pmt = parseFloat(document.getElementById('t_pmt').value) || 0;
+        var r = (parseFloat(document.getElementById('t_r').value) || 0) / 100;
+        var months = monthsToReachGoal(goal, pv, pmt, r);
+
+        if (months === null) {
+          document.getElementById('time-answer').innerHTML =
+            'Not within 120 years<small>Try higher contributions or return, or a lower goal.</small>';
+        } else {
+          document.getElementById('time-answer').innerHTML = formatYearsMonths(months);
+        }
+        document.getElementById('out-time').hidden = false;
+      }
+
+      document.getElementById('btn-fv').addEventListener('click', function () {
+        window.bbRunWithEmailGate(PAGE_ID, runFv);
+      });
+      document.getElementById('btn-time').addEventListener('click', function () {
+        window.bbRunWithEmailGate(PAGE_ID, runTime);
+      });
+
+      document.getElementById('btn-print-fv').addEventListener('click', function () {
+        window.print();
+      });
+      document.getElementById('btn-print-time').addEventListener('click', function () {
+        window.print();
+      });
+
+      var tFv = document.getElementById('tab-fv');
+      var tTime = document.getElementById('tab-time');
+      var pFv = document.getElementById('panel-fv');
+      var pTime = document.getElementById('panel-time');
+      var tablist = document.querySelector('[role="tablist"]');
+
+      function selectTab(which, moveFocus) {
+        var fv = which === 'fv';
+        tFv.setAttribute('aria-selected', fv);
+        tTime.setAttribute('aria-selected', !fv);
+        tFv.tabIndex = fv ? 0 : -1;
+        tTime.tabIndex = fv ? -1 : 0;
+        pFv.hidden = !fv;
+        pTime.hidden = fv;
+        if (moveFocus) (fv ? tFv : tTime).focus();
+      }
+
+      tFv.addEventListener('click', function () {
+        selectTab('fv', false);
+        tFv.focus();
+      });
+      tTime.addEventListener('click', function () {
+        selectTab('time', false);
+        tTime.focus();
+      });
+
+      if (tablist) {
+        tablist.addEventListener('keydown', function (e) {
+          var onFv = tFv.getAttribute('aria-selected') === 'true';
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectTab(onFv ? 'time' : 'fv', true);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectTab(!onFv ? 'fv' : 'time', true);
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            selectTab('fv', true);
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            selectTab('time', true);
+          }
+        });
+      }
+    })();
+  </script>
+  <script>
+    function toggleNav(btn) {
+      btn.classList.toggle('open');
+      var drawer = document.getElementById('ndrawer');
+      drawer.classList.toggle('open');
+      document.body.style.overflow = btn.classList.contains('open') ? 'hidden' : '';
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.ndrawer a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var btn = document.querySelector('.ham');
+          if (btn) btn.classList.remove('open');
+          var drawer = document.getElementById('ndrawer');
+          if (drawer) drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
