@@ -14,18 +14,21 @@
     body{font-family:var(--sans);background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
     .bb-skip-link{position:absolute;left:-9999px;top:0;z-index:10000;padding:12px 20px;background:#fff;color:var(--bd);font-weight:600;border:2px solid var(--or);border-radius:2px;text-decoration:none;font-family:var(--sans);font-size:14px}
     .bb-skip-link:focus{left:12px;top:12px;outline:3px solid rgba(240,90,26,.45);outline-offset:2px}
-    .gg-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;max-width:1200px;margin-left:auto;margin-right:auto}
+    .gg-band.calc-band{padding-left:0!important;padding-right:0!important}
+    .gg-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:20px;padding:0 72px}
     .gg-back{font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--blu);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
     .gg-back:hover{color:var(--or);border-bottom-color:rgba(240,90,26,.35)}
-    .gg-ext{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;padding:11px 20px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:background .2s}
-    .gg-ext:hover{background:var(--od)}
-    .gg-frame{max-width:1200px;margin:0 auto;background:#fff;border:.5px solid var(--bl);border-radius:2px;overflow:hidden;box-shadow:0 8px 32px rgba(30,38,64,.08)}
-    .gg-iframe{display:block;width:100%;min-height:min(82dvh,880px);height:820px;border:0}
-    .gg-note{max-width:1200px;margin:18px auto 0;font-size:13px;color:var(--gt);line-height:1.65}
+    .gg-frame{width:100%;margin:0;background:#fff;border-top:.5px solid var(--bl);border-bottom:.5px solid var(--bl);border-left:none;border-right:none;border-radius:0;overflow:hidden;box-shadow:none}
+    .gg-iframe{display:block;width:100%;min-height:min(88dvh,980px);height:calc(100dvh - 260px);border:0}
+    .gg-note{margin:18px 0 0;padding:0 72px;font-size:13px;color:var(--gt);line-height:1.65;max-width:none}
     .gg-note a{color:var(--blu);text-decoration:underline;text-underline-offset:2px}.gg-note a:hover{color:var(--or)}
     .fade{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.fade.vis{opacity:1;transform:none}
+    @media(max-width:1024px){
+      .gg-toolbar,.gg-note{padding-left:40px;padding-right:40px}
+    }
     @media(max-width:768px){
-      .gg-iframe{min-height:70dvh;height:640px}
+      .gg-toolbar,.gg-note{padding-left:20px;padding-right:20px}
+      .gg-iframe{min-height:72dvh;height:calc(100dvh - 240px)}
     }
   </style>
 </head>
@@ -71,10 +74,9 @@
     <p>Use the interactive tool below to explore what charitable giving might look like for you — illustrative only, not personal financial advice.</p>
   </div>
 
-  <div class="calc-band fade" id="main">
+  <div class="calc-band fade gg-band" id="main">
     <div class="gg-toolbar">
       <a href="tools.html" class="gg-back">← Back to tools</a>
-      <a href="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/" class="gg-ext" target="_blank" rel="noopener noreferrer">Open in new tab</a>
     </div>
     <div class="gg-frame">
       <iframe
@@ -88,9 +90,7 @@
     </div>
     <p class="gg-note">
       The tool runs on a secure Bloomsbury-hosted app. If it does not appear in the frame (for example, due to browser or network restrictions),
-      <a href="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/">open Giving Gauge directly</a>.
-      Nothing you enter is stored by Bloomsbury for later use; refer to the app for its own privacy behaviour.
-    </p>
+      <a href="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/">open Giving Gauge directly</a>.</p>
   </div>
 
   <footer>
