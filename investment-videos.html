@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment videos — Bloomsbury Associates | Resources</title>
+<meta name="description" content="How we think about investing: evidence-based ideas and explainers — curated videos from Bloomsbury Associates, Wellington.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#1e2230;--bd:#1e2640;--bm:#2a3352;--blu:#3a4a6b;--bpl:#fff;--gl:#fff;--gm:#dde0ea;--gt:#5a6278;--or:#f05a1a;--ol:#fef0e8;--od:#c94a12;--bl:#e0e3ed;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{background:var(--bd);padding:0 56px;display:flex;align-items:center;justify-content:space-between;height:68px;position:sticky;top:0;z-index:100;border-bottom:.5px solid rgba(255,255,255,.07)}
+.nl{color:#fff;font-family:var(--serif);font-size:22px;font-weight:500;text-decoration:none}.nl em{font-style:italic;color:var(--or)}
+.nm{display:flex;gap:32px;list-style:none}.nm a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:color .2s}.nm a:hover,.nm a.act{color:#fff}
+.nr{display:flex;align-items:center;gap:20px}.nph{font-size:13px;color:rgba(255,255,255,.38)}
+.nc{background:var(--or);color:#fff;padding:11px 22px;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;transition:background .2s;text-decoration:none}.nc:hover{background:var(--od)}
+.phero{background:var(--bd);padding:88px 72px 72px}
+.pbread{font-size:12px;color:rgba(255,255,255,.3);margin-bottom:22px}.pbread a{color:rgba(255,255,255,.42);text-decoration:none}.pbread a:hover{color:var(--or)}
+.phero h1{font-family:var(--serif);font-size:clamp(42px,5vw,68px);font-weight:500;color:#fff;line-height:1.08;margin-bottom:18px}.phero h1 em{font-style:italic;color:var(--or)}
+.phero p{font-size:17px;font-weight:300;color:rgba(255,255,255,.55);max-width:640px;line-height:1.8}
+.sl{font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bd);margin-bottom:12px}
+.sh2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:500;color:var(--ink);line-height:1.15;margin-bottom:14px}.sh2 em{font-style:italic;color:var(--or)}
+.vid-page{padding:72px;background:var(--gl)}
+.vid-intro{max-width:640px;margin-bottom:40px;font-size:15px;color:var(--gt);line-height:1.85}
+.vid-main{margin-bottom:56px}
+.vid-frame{position:relative;width:100%;max-width:960px;margin:0 auto;border:.5px solid var(--bl);background:#000;box-shadow:0 12px 40px rgba(30,38,64,.12);border-radius:2px;overflow:hidden}
+.vid-frame::before{content:'';display:block;padding-bottom:56.25%}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-cap{font-size:13px;color:var(--gt);margin-top:14px;max-width:960px;margin-left:auto;margin-right:auto;line-height:1.65}
+/* Playlist wheel */
+.wheel-sec{margin-top:8px;margin-bottom:56px}
+.wheel-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:20px;max-width:1100px;margin-left:auto;margin-right:auto}
+.wheel-head p{font-size:14px;color:var(--gt);max-width:420px;line-height:1.7}
+.wheel-all{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--or);text-decoration:none;white-space:nowrap}.wheel-all:hover{color:var(--od)}
+.playlist-wheel{overflow:hidden;border:.5px solid var(--bl);background:var(--bd);border-radius:2px;position:relative;max-width:1100px;margin:0 auto}
+.playlist-wheel::before,.playlist-wheel::after{content:'';position:absolute;top:0;bottom:0;width:48px;z-index:2;pointer-events:none}
+.playlist-wheel::before{left:0;background:linear-gradient(90deg,var(--bd),transparent)}
+.playlist-wheel::after{right:0;background:linear-gradient(270deg,var(--bd),transparent)}
+.playlist-wheel-track{display:flex;gap:18px;padding:22px 0;width:max-content;animation:vidwheel 50s linear infinite}
+.playlist-wheel-track:hover{animation-play-state:paused}
+@keyframes vidwheel{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.wheel-card{flex:0 0 auto;width:260px;background:rgba(255,255,255,.06);border:.5px solid rgba(255,255,255,.1);border-radius:2px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.wheel-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.wheel-card .thumb{aspect-ratio:16/9;background:#1a2238;position:relative;overflow:hidden}
+.wheel-card .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.wheel-card .thumb::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(240,90,26,.15),transparent 60%)}
+.wheel-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.wheel-play::after{content:'';border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff;margin-left:4px}
+.wheel-card .meta{padding:14px 16px 18px}
+.wheel-card .meta strong{display:block;font-family:var(--serif);font-size:17px;font-weight:500;color:#fff;margin-bottom:4px;line-height:1.25}
+.wheel-card .meta span{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.04em;text-transform:uppercase}
+.wheel-card.pl-wide{width:300px;background:linear-gradient(135deg,rgba(240,90,26,.2),rgba(255,255,255,.06))}
+.wheel-card.pl-wide .meta strong{font-size:19px}
+/* More videos grid */
+.vid-more{max-width:1100px;margin:0 auto}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:28px}
+.vid-tile{background:#fff;border:.5px solid var(--bl);overflow:hidden}
+.vid-tile .vid-frame{border:none;box-shadow:none;border-radius:0}
+.vid-tile .vid-cap{padding:14px 18px 20px;margin:0;font-size:13px}
+.vid-note{font-size:12px;color:var(--gt);margin-top:40px;padding-top:28px;border-top:.5px solid var(--bl);max-width:1100px;margin-left:auto;margin-right:auto;line-height:1.75}
+footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.4fr;gap:40px}
+.fwm{font-family:var(--serif);font-size:20px;color:#fff;font-weight:500;margin-bottom:10px}.fwm em{color:var(--or);font-style:italic}
+.ftag{font-family:var(--serif);font-size:14px;font-style:italic;color:rgba(255,255,255,.3);margin-bottom:10px}
+.fdesc{font-size:12px;color:rgba(255,255,255,.25);line-height:1.75}
+.fcol h4{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol ul a{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}.fcol ul a:hover{color:#fff}
+.fbot{background:#09101e;padding:16px 72px;display:flex;justify-content:space-between;align-items:center;border-top:.5px solid rgba(255,255,255,.04)}
+.fbot p{font-size:11px;color:rgba(255,255,255,.15)}.fbot a{color:rgba(255,255,255,.3);text-decoration:none}.fbot a:hover{color:rgba(255,255,255,.6)}
+.fn-signup{border-left:.5px solid rgba(255,255,255,.08);padding-left:32px}
+.fn-head{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:8px}
+.fn-sub{font-size:12px;color:rgba(255,255,255,.28);line-height:1.6;margin-bottom:16px}
+.fn-row{display:flex;gap:6px}
+.fn-f{flex:1;background:rgba(255,255,255,.06);border:.5px solid rgba(255,255,255,.12);padding:10px 12px;color:#fff;font-size:12px;font-family:var(--sans);border-radius:2px;outline:none;transition:border-color .2s;min-width:0}
+.fn-f::placeholder{color:rgba(255,255,255,.25)}
+.fn-f:focus{border-color:rgba(240,90,26,.45)}
+.fn-btn{background:var(--or);color:#fff;border:none;padding:10px 14px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border-radius:2px;white-space:nowrap;transition:background .2s;flex-shrink:0}.fn-btn:hover:not(:disabled){background:var(--od)}
+.fade{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.fade.vis{opacity:1;transform:none}
+.has-drop{position:relative}
+.has-drop:hover .dropdown,.has-drop:focus-within .dropdown{opacity:1;pointer-events:all;transform:translateY(0)}
+.dropdown{position:absolute;top:100%;left:-16px;background:var(--bm);border:.5px solid rgba(255,255,255,.12);border-top:2px solid var(--or);min-width:190px;opacity:0;pointer-events:none;transform:translateY(-6px);transition:all .18s ease;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.dropdown a{display:block;padding:12px 18px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:.5px solid rgba(255,255,255,.07);transition:all .15s;font-family:var(--sans);font-weight:400}
+.dropdown a:last-child{border-bottom:none}
+.dropdown a:hover{color:#fff;background:rgba(255,255,255,.06);padding-left:22px}
+@media (prefers-reduced-motion:reduce){
+  .playlist-wheel-track{animation:none;transform:none;flex-wrap:wrap;width:100%;justify-content:center;padding:22px 16px}
+}
+</style>
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nl">Bloomsbury <em>Associates</em></a>
+  <ul class="nm">
+    <li><a href="what-we-do.html">What we do</a></li>
+    <li><a href="our-clients.html">Our clients</a></li>
+    <li><a href="about-us.html">About us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="has-drop">
+      <a href="blog.html" class="act">Resources</a>
+      <div class="dropdown">
+        <a href="tools.html">Tools</a>
+        <a href="blog.html">Blog</a>
+        <a href="investment-videos.html">Investment videos</a>
+        <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nr"><button class="ham" aria-label="Open menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+    <span class="nph">+64 4 499 6979</span>
+    <a href="index.html#form" class="nc">Free consultation</a>
+  </div>
+</nav>
+<div class="ndrawer" id="ndrawer">
+  <a href="what-we-do.html">What we do</a>
+  <a href="our-clients.html">Our clients</a>
+  <a href="about-us.html">About us</a>
+  <a href="contact.html">Contact</a>
+  <a href="tools.html">Tools</a>
+  <a href="blog.html">Blog</a>
+  <a href="investment-videos.html">Investment videos</a>
+  <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+  <a href="index.html#form" class="nc">Free consultation</a>
+  <span class="nph">+64 4 499 6979</span>
+</div>
+
+<div class="phero">
+  <p class="pbread"><a href="index.html">Home</a> / <a href="blog.html">Resources</a> / Investment videos</p>
+  <h1>Investment <em>videos</em></h1>
+  <p>We do not claim to predict markets. We invest carefully for the longer term, using well-established evidence rather than guesswork. These videos outline ideas that sit behind our approach — hosted on YouTube for easy viewing.</p>
+</div>
+
+<div class="vid-page fade">
+  <div class="sl">Featured</div>
+  <h2 class="sh2">Start <em>here</em></h2>
+  <p class="vid-intro">A full-length perspective on markets, costs, and behaviour — useful context if you are new to evidence-based investing or want a refresher.</p>
+  <div class="vid-main">
+    <div class="vid-frame">
+      <iframe title="Featured investment video" src="https://www.youtube.com/embed/T98825bzcKw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="vid-cap">Main feature — select captions and quality in the YouTube player controls if you need them.</p>
+  </div>
+
+  <div class="wheel-sec">
+    <div class="wheel-head">
+      <div>
+        <div class="sl">Playlist</div>
+        <h2 class="sh2" style="margin-bottom:0">The Informed <em>Investor</em></h2>
+      </div>
+      <p>Browse episodes in a continuous strip below, or open the full playlist on YouTube.</p>
+      <a class="wheel-all" href="https://www.youtube.com/playlist?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" target="_blank" rel="noopener noreferrer">Open playlist →</a>
+    </div>
+    <div class="playlist-wheel" aria-label="Playlist highlights — scrolling cards">
+      <div class="playlist-wheel-track" id="wheelTrack">
+        <a class="wheel-card pl-wide" href="https://www.youtube.com/playlist?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" target="_blank" rel="noopener noreferrer">
+          <div class="thumb" style="background:linear-gradient(145deg,#2a3352,#1e2640);min-height:120px;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:var(--serif);font-size:26px;color:#fff;font-weight:500">The Informed Investor</span>
+          </div>
+          <div class="meta"><strong>Full series on YouTube</strong><span>Playlist · tap to open</span></div>
+        </a>
+        <a class="wheel-card" href="https://www.youtube.com/watch?v=ZztNprhVl-M" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/ZztNprhVl-M/hqdefault.jpg" alt=""><span class="wheel-play" aria-hidden="true"></span></div><div class="meta"><strong>Selected episode</strong><span>Watch on YouTube</span></div></a>
+        <a class="wheel-card" href="https://www.youtube.com/watch?v=InkwpFRGbOQ" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/InkwpFRGbOQ/hqdefault.jpg" alt=""><span class="wheel-play" aria-hidden="true"></span></div><div class="meta"><strong>Selected episode</strong><span>Watch on YouTube</span></div></a>
+        <a class="wheel-card" href="https://www.youtube.com/watch?v=n2J8y2w6Ho0" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/n2J8y2w6Ho0/hqdefault.jpg" alt=""><span class="wheel-play" aria-hidden="true"></span></div><div class="meta"><strong>Selected episode</strong><span>Watch on YouTube</span></div></a>
+        <a class="wheel-card" href="https://www.youtube.com/playlist?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/T98825bzcKw/hqdefault.jpg" alt=""><span class="wheel-play" aria-hidden="true"></span></div><div class="meta"><strong>More from the playlist</strong><span>Curated series</span></div></a>
+        <a class="wheel-card" href="https://www.youtube.com/playlist?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" target="_blank" rel="noopener noreferrer"><div class="thumb" style="background:linear-gradient(145deg,var(--or),var(--od));min-height:120px;display:flex;align-items:center;justify-content:center"><span style="font-size:42px;color:rgba(255,255,255,.9)">▶</span></div><div class="meta"><strong>Keep exploring</strong><span>Same playlist</span></div></a>
+      </div>
+    </div>
+    <p class="vid-cap" style="text-align:center;margin-top:16px">The strip scrolls automatically; hover to pause. Individual titles appear on YouTube.</p>
+    <div style="max-width:720px;margin:36px auto 0">
+      <div class="sl" style="margin-bottom:10px;text-align:center">Play in page</div>
+      <div class="vid-frame">
+        <iframe title="The Informed Investor — YouTube playlist" src="https://www.youtube.com/embed/videoseries?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="vid-cap" style="text-align:center">Use the playlist menu inside the player to move between episodes, or <a href="https://www.youtube.com/playlist?list=PLCyJr6FFig-h1mA7rVP7Mbk0irFw2wA90" target="_blank" rel="noopener noreferrer" style="color:var(--or);text-decoration:none;font-weight:500">open the playlist on YouTube</a>.</p>
+    </div>
+  </div>
+
+  <div class="vid-more">
+    <div class="sl">More to watch</div>
+    <h2 class="sh2">Three <em>short picks</em></h2>
+    <p class="vid-intro" style="margin-bottom:0">Additional clips from the same body of work — useful for specific topics.</p>
+    <div class="vid-grid">
+      <div class="vid-tile">
+        <div class="vid-frame"><iframe title="Video: selected topic" src="https://www.youtube.com/embed/ZztNprhVl-M" allowfullscreen loading="lazy"></iframe></div>
+        <p class="vid-cap">Curated pick — open on YouTube for related recommendations.</p>
+      </div>
+      <div class="vid-tile">
+        <div class="vid-frame"><iframe title="Video: selected topic" src="https://www.youtube.com/embed/InkwpFRGbOQ" allowfullscreen loading="lazy"></iframe></div>
+        <p class="vid-cap">From a longer playlist; use YouTube’s queue for continuous viewing.</p>
+      </div>
+      <div class="vid-tile">
+        <div class="vid-frame"><iframe title="Video: selected topic" src="https://www.youtube.com/embed/n2J8y2w6Ho0" allowfullscreen loading="lazy"></iframe></div>
+        <p class="vid-cap">Curated pick — captions available in the player where provided by the publisher.</p>
+      </div>
+    </div>
+    <p class="vid-note">Videos are hosted by third parties (YouTube). Content belongs to the respective publishers; we link to them for education only — not as personal advice. For advice tailored to you, <a href="index.html#form" style="color:var(--or);text-decoration:none;font-weight:500">book a consultation</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <div><p class="fwm">Bloomsbury <em>Associates</em></p><p class="ftag">Wellbeing through wealth management</p><p class="fdesc">Wellington's only CEFEX-certified financial advisory practice — serving individuals, families and charities across New Zealand since 2009.</p></div>
+  <div class="fn-signup">
+    <p class="fn-head">Stay Informed</p>
+    <p class="fn-sub">Get our regular insights — unsubscribe any time.</p>
+    <div class="fn-row">
+      <input class="fn-f" type="email" placeholder="Email address">
+      <button class="fn-btn" onclick="this.textContent='✓';this.style.background='#2a6e3a';this.disabled=true">Subscribe</button>
+    </div>
+  </div>
+  <div class="fcol"><h4>What we do</h4><ul><li><a href="what-we-do.html#fp">Financial planning</a></li><li><a href="what-we-do.html#wm">Wealth management</a></li><li><a href="what-we-do.html#philanthropy">Philanthropic giving</a></li><li><a href="what-we-do.html#ethical">Ethical investing</a></li></ul></div>
+  <div class="fcol"><h4>Our clients</h4><ul><li><a href="our-clients.html">Real stories</a></li><li><a href="our-clients.html#testimonials">Testimonials</a></li><li><a href="index.html#form">Initial consultation</a></li><li><a href="contact.html#newsletter">Newsletter</a></li></ul></div>
+  <div class="fcol"><h4>Company</h4><ul><li><a href="about-us.html">About us</a></li><li><a href="about-us.html#cefex">CEFEX certification</a></li><li><a href="blog.html">Resources</a></li><li><a href="investment-videos.html">Investment videos</a></li><li><a href="#">Disclosure statement</a></li></ul></div>
+</footer>
+<div class="fbot"><p>© Bloomsbury Associates 2026. All rights reserved.</p><p><a href="#">Financial Advice Provider</a> · <a href="#">Disclosure Statement</a> · <a href="#">Terms &amp; Conditions</a></p></div>
+
+<script>
+(function(){
+  var track=document.getElementById('wheelTrack');
+  if(!track||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  track.innerHTML+=track.innerHTML;
+})();
+const obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target)}})},{threshold:.06});
+document.querySelectorAll('.fade').forEach(function(el){obs.observe(el)});
+function toggleNav(btn){
+  btn.classList.toggle('open');
+  var drawer=document.getElementById('ndrawer');
+  drawer.classList.toggle('open');
+  document.body.style.overflow=btn.classList.contains('open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.ndrawer a').forEach(function(a){
+    a.addEventListener('click',function(){
+      var btn=document.querySelector('.ham');
+      if(btn)btn.classList.remove('open');
+      var drawer=document.getElementById('ndrawer');
+      if(drawer)drawer.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+});
+</script>
+</body>
+</html>

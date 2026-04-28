@@ -70,8 +70,8 @@
 
   /* Reduce section side padding */
   .sec,.wsec,.tsec,.ctasec,.svsec-light,
-  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
-  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band{
+  .origin,.team-sec,.aaf-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band,.vid-page{
     padding-left:56px !important;
     padding-right:56px !important;
   }
@@ -118,8 +118,8 @@
 
   /* SECTION PADDING */
   .sec,.wsec,.tsec,.ctasec,.teamsec,
-  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
-  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band{
+  .origin,.team-sec,.aaf-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band,.vid-page{
     padding-left:40px !important;
     padding-right:40px !important;
   }
@@ -141,6 +141,10 @@
   .origin{grid-template-columns:1fr;gap:48px}
   .tgrid{grid-template-columns:1fr}
   .cefex-sec{grid-template-columns:1fr;gap:48px}
+  .aaf-grid{grid-template-columns:1fr}
+  .aaf-panel{padding:28px 24px 32px}
+  .vid-grid{grid-template-columns:1fr}
+  .wheel-head{flex-direction:column;align-items:flex-start}
   .ext-grid{grid-template-columns:1fr 1fr}
 
   /* WHAT WE DO */
@@ -200,8 +204,8 @@
 
   /* SECTION PADDING */
   .sec,.wsec,.tsec,.ctasec,
-  .origin,.team-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
-  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band{
+  .origin,.team-sec,.aaf-sec,.cefex-sec,.ext-sec,.partners,.cta-band,
+  .svc-sec,.process-band,.faq-sec,.contact-wrap,.storsec,.calc-band,.vid-page{
     padding:52px 20px !important;
   }
   .blog-wrap{padding:44px 20px !important}
@@ -228,8 +232,11 @@
   .tgrid{grid-template-columns:1fr;gap:2px}
   .tm{grid-template-columns:64px 1fr;gap:20px;padding:24px 20px}
   .tphoto{width:64px;height:64px}
+  .aaf-sec{padding:52px 20px !important}
+  .aaf-grid{grid-template-columns:1fr}
   .cefex-sec{grid-template-columns:1fr;gap:32px;padding:52px 20px !important}
   .cpillars{gap:2px}
+  .vid-grid{grid-template-columns:1fr}
   .ext-grid{grid-template-columns:1fr}
   .pgrid{grid-template-columns:1fr 1fr}
 

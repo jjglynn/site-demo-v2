@@ -10,7 +10,7 @@
     '<strong>Important:</strong> Illustrative outputs only — not personalised financial advice or a product recommendation. For advice on your situation, contact Bloomsbury Associates.' +
     '</aside>' +
     '<footer class="bb-model-foot" role="contentinfo">' +
-    '<img class="bb-foot-icon" src="assets/icon.jpg" alt="" width="40" height="40" decoding="async" />' +
+    '<img class="bb-foot-icon" src="icon.jpg" alt="" width="40" height="40" decoding="async" />' +
     '<span class="bb-model-foot__text">' +
     '<span class="bb-model-foot__meta">Calculator model v1.1</span>' +
     '<span class="bb-model-foot__sep" aria-hidden="true">·</span>' +

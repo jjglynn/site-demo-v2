@@ -111,6 +111,21 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
 .dropdown a{display:block;padding:12px 18px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;border-bottom:.5px solid rgba(255,255,255,.07);transition:all .15s;font-family:var(--sans);font-weight:400}
 .dropdown a:last-child{border-bottom:none}
 .dropdown a:hover{color:#fff;background:rgba(255,255,255,.06);padding-left:22px}
+/* Accreditation band (below team) */
+.aaf-sec{padding:80px 72px;background:#f4f6fb;border-top:.5px solid var(--bl);border-bottom:.5px solid var(--bl)}
+.aaf-head{max-width:720px;margin-bottom:40px}
+.aaf-head p{font-size:15px;color:var(--gt);line-height:1.85;margin-top:12px}
+.aaf-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:2px;background:var(--bl);border:.5px solid var(--bl)}
+.aaf-panel{background:#fff;padding:36px 40px 40px}
+.aaf-panel h3{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--ink);margin-bottom:14px;line-height:1.2}
+.aaf-panel h3 em{font-style:italic;color:var(--or)}
+.aaf-panel>p{font-size:14px;color:var(--gt);line-height:1.8;margin-bottom:16px}
+.aaf-panel a.ceflink{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--or);text-decoration:none}.aaf-panel a.ceflink:hover{color:var(--od)}
+.ceflist{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:11px}
+.ceflist li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--gt);line-height:1.65}
+.ceflist li::before{content:'';width:6px;height:6px;background:var(--or);border-radius:50%;margin-top:7px;flex-shrink:0}
+.aaf-aifnote{font-size:13px;color:var(--gt);line-height:1.75;margin-top:18px;padding-top:18px;border-top:.5px solid var(--bl)}
+.aaf-aifnote strong{color:var(--ink);font-weight:500}
 </style>
 <link rel="stylesheet" href="responsive.css">
 </head>
@@ -127,6 +142,7 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
       <div class="dropdown">
         <a href="tools.html">Tools</a>
         <a href="blog.html">Blog</a>
+        <a href="investment-videos.html">Investment videos</a>
         <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
       </div>
     </li>
@@ -143,6 +159,7 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
   <a href="contact.html">Contact</a>
   <a href="tools.html">Tools</a>
   <a href="blog.html">Blog</a>
+  <a href="investment-videos.html">Investment videos</a>
   <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
   <a href="index.html#form" class="nc">Free consultation</a>
   <span class="nph">+64 4 499 6979</span>
@@ -254,18 +271,46 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
   </div>
 </section>
 
-<section class="cefex-sec fade" id="cefex">
-  <div>
-    <div class="sl" style="color:rgba(240,90,26,.7)">Global best practice</div>
-    <h2 class="sh2">Wellington's only <em>CEFEX-certified</em> advisers</h2>
-    <div class="cefex-body">
-      <p>CEFEX (Centre for Fiduciary Excellence) is an independent global assessment and certification organisation. It assesses professional financial advisers through a rigorous annual audit process.</p>
-      <p>Bloomsbury Associates was the first financial adviser practice in Wellington to be independently audited and certified to global best practice standards.</p>
-      <p>Our CEFEX certification means we <strong>exceed regulatory minimums</strong>, maintain global fiduciary best practice, and always place our clients' interests first.</p>
+<section class="aaf-sec fade" id="cefex">
+  <div class="aaf-head">
+    <div class="sl">Certifications &amp; accreditation</div>
+    <h2 class="sh2">Global standards, <em>independently verified</em></h2>
+    <p>Alongside our regulatory obligations, we choose to be measured against the highest global fiduciary benchmarks — and to hold professional designations that reflect the same duty of care.</p>
+  </div>
+  <div class="aaf-grid">
+    <div class="aaf-panel">
+      <h3>CEFEX <em>certification</em></h3>
+      <p>CEFEX (Centre for Fiduciary Excellence) is an independent global assessment and certification organisation. It evaluates professional financial advisers to strengthen risk management for investors.</p>
+      <p>Bloomsbury Associates was the first financial adviser practice in Wellington to be independently audited and certified to these standards. CEFEX expert analysts review us every year — which confirms transparency, accountability, and alignment with current global best practice.</p>
+      <a class="ceflink" href="https://bloomsbury.co.nz/about-us/cefex.html" target="_blank" rel="noopener noreferrer">CEFEX information on bloomsbury.co.nz →</a>
+      <p style="font-size:13px;color:var(--gt);margin-top:20px;margin-bottom:8px"><strong style="color:var(--ink)">What certification covers</strong> (summary)</p>
+      <ul class="ceflist">
+        <li>Knowledge of standards, laws, and trust provisions relevant to our work</li>
+        <li>Diversifying assets to each client’s risk and return profile</li>
+        <li>Preparing and maintaining an investment policy statement where appropriate</li>
+        <li>Using prudent experts, documenting due diligence, and controlling investment expenses</li>
+        <li>Monitoring expert activity and managing conflicts of interest in clients’ favour</li>
+      </ul>
     </div>
-    <div class="cefex-logo">
-      <img src="https://bloomsbury.co.nz/resources/img/associates/CEFEX-Mark2.png" alt="CEFEX certification mark">
-      <span class="cefex-badge">Globally audited · Annual assessment</span>
+    <div class="aaf-panel" id="aif">
+      <h3>Accredited Investment Fiduciary <em>(AIF©)</em></h3>
+      <p>The Accredited Investment Fiduciary© designation recognises specialised knowledge of fiduciary standards and their application to investment management.</p>
+      <p><strong>Philip Stevenson</strong> and <strong>Lauren Teague</strong> hold the AIF© designation — a credential for fiduciary excellence held by relatively few advisers in New Zealand.</p>
+      <p class="aaf-aifnote">AIF© complements our CEFEX certification: together they reflect how we think about stewardship of client assets — not as a label we give ourselves, but as standards we maintain through training, process, and external scrutiny.</p>
+      <div class="cefex-logo" style="margin-top:28px">
+        <img src="https://bloomsbury.co.nz/resources/img/associates/CEFEX-Mark2.png" alt="CEFEX certification mark" style="height:64px">
+        <span class="cefex-badge" style="background:rgba(240,90,26,.1);border-color:rgba(240,90,26,.25);color:var(--od)">Annual CEFEX audit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cefex-sec fade">
+  <div>
+    <div class="sl" style="color:rgba(240,90,26,.7)">Why it matters</div>
+    <h2 class="sh2">Peace of mind <em>you can verify</em></h2>
+    <div class="cefex-body">
+      <p>Our CEFEX certification means we <strong>exceed minimum regulatory standards</strong>, maintain global fiduciary best practice, and place our clients’ interests first. It is proof of strong integrity — renewed through audit each year, not a one-off badge.</p>
     </div>
   </div>
   <div class="cpillars">
@@ -315,7 +360,7 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
   </div>
   <div class="fcol"><h4>What we do</h4><ul><li><a href="what-we-do.html#fp">Financial planning</a></li><li><a href="what-we-do.html#wm">Wealth management</a></li><li><a href="what-we-do.html#philanthropy">Philanthropic giving</a></li><li><a href="what-we-do.html#ethical">Ethical investing</a></li></ul></div>
   <div class="fcol"><h4>Our clients</h4><ul><li><a href="our-clients.html">Real stories</a></li><li><a href="our-clients.html#testimonials">Testimonials</a></li><li><a href="index.html#form">Initial consultation</a></li><li><a href="contact.html#newsletter">Newsletter</a></li></ul></div>
-  <div class="fcol"><h4>Company</h4><ul><li><a href="about-us.html">About us</a></li><li><a href="about-us.html#cefex">CEFEX certification</a></li><li><a href="blog.html">Resources</a></li><li><a href="#">Disclosure statement</a></li></ul></div>
+  <div class="fcol"><h4>Company</h4><ul><li><a href="about-us.html">About us</a></li><li><a href="about-us.html#cefex">CEFEX &amp; AIF</a></li><li><a href="blog.html">Resources</a></li><li><a href="investment-videos.html">Investment videos</a></li><li><a href="#">Disclosure statement</a></li></ul></div>
 </footer>
 <div class="fbot"><p>© Bloomsbury Associates 2026. All rights reserved.</p><p><a href="#">Financial Advice Provider</a> · <a href="#">Disclosure Statement</a> · <a href="#">Terms &amp; Conditions</a></p></div>
 <script>
