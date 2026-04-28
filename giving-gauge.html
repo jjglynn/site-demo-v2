@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giving Gauge — Bloomsbury Associates | Philanthropic Giving Tool</title>
+  <meta name="description" content="Giving Gauge — explore what meaningful charitable giving could look like for your situation. Free, illustrative tool from Bloomsbury Associates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site-chrome.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    body{font-family:var(--sans);background:#fff;color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    .bb-skip-link{position:absolute;left:-9999px;top:0;z-index:10000;padding:12px 20px;background:#fff;color:var(--bd);font-weight:600;border:2px solid var(--or);border-radius:2px;text-decoration:none;font-family:var(--sans);font-size:14px}
+    .bb-skip-link:focus{left:12px;top:12px;outline:3px solid rgba(240,90,26,.45);outline-offset:2px}
+    .gg-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;max-width:1200px;margin-left:auto;margin-right:auto}
+    .gg-back{font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--blu);text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+    .gg-back:hover{color:var(--or);border-bottom-color:rgba(240,90,26,.35)}
+    .gg-ext{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;padding:11px 20px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border-radius:2px;text-decoration:none;transition:background .2s}
+    .gg-ext:hover{background:var(--od)}
+    .gg-frame{max-width:1200px;margin:0 auto;background:#fff;border:.5px solid var(--bl);border-radius:2px;overflow:hidden;box-shadow:0 8px 32px rgba(30,38,64,.08)}
+    .gg-iframe{display:block;width:100%;min-height:min(82dvh,880px);height:820px;border:0}
+    .gg-note{max-width:1200px;margin:18px auto 0;font-size:13px;color:var(--gt);line-height:1.65}
+    .gg-note a{color:var(--blu);text-decoration:underline;text-underline-offset:2px}.gg-note a:hover{color:var(--or)}
+    .fade{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.fade.vis{opacity:1;transform:none}
+    @media(max-width:768px){
+      .gg-iframe{min-height:70dvh;height:640px}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="bb-skip-link">Skip to main content</a>
+  <nav>
+    <a href="index.html" class="nl">Bloomsbury <em>Associates</em></a>
+    <ul class="nm">
+      <li><a href="what-we-do.html">What we do</a></li>
+      <li><a href="our-clients.html">Our clients</a></li>
+      <li><a href="about-us.html">About us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="has-drop">
+        <a href="blog.html" class="act">Resources</a>
+        <div class="dropdown">
+          <a href="tools.html">Tools</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+        </div>
+      </li>
+    </ul>
+    <div class="nr">
+      <button class="ham" type="button" aria-label="Open menu" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+      <span class="nph">+64 4 499 6979</span>
+      <a href="index.html#form" class="nc">Free consultation</a>
+    </div>
+  </nav>
+  <div class="ndrawer" id="ndrawer">
+    <a href="what-we-do.html">What we do</a>
+    <a href="our-clients.html">Our clients</a>
+    <a href="about-us.html">About us</a>
+    <a href="contact.html">Contact</a>
+    <a href="tools.html" class="act">Tools</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://bloomsbury.co.nz/what-we-do/philanthropic-giving/the-future-of-charitable-giving-in-nz.html">Research</a>
+    <a href="index.html#form" class="nc">Free consultation</a>
+    <span class="nph">+64 4 499 6979</span>
+  </div>
+
+  <div class="phero">
+    <p class="pbread"><a href="index.html">Home</a> / <a href="blog.html">Resources</a> / <a href="tools.html">Tools</a> / Giving Gauge</p>
+    <h1>Giving <em>Gauge</em></h1>
+    <p>Use the interactive tool below to explore what charitable giving might look like for you — illustrative only, not personal financial advice.</p>
+  </div>
+
+  <div class="calc-band fade" id="main">
+    <div class="gg-toolbar">
+      <a href="tools.html" class="gg-back">← Back to tools</a>
+      <a href="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/" class="gg-ext" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+    </div>
+    <div class="gg-frame">
+      <iframe
+        class="gg-iframe"
+        src="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/"
+        title="Giving Gauge — philanthropic giving planning tool"
+        loading="lazy"
+        allow="fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+    <p class="gg-note">
+      The tool runs on a secure Bloomsbury-hosted app. If it does not appear in the frame (for example, due to browser or network restrictions),
+      <a href="https://bl00ms-2026-jg.shinyapps.io/BloomsburyGivingGauge/">open Giving Gauge directly</a>.
+      Nothing you enter is stored by Bloomsbury for later use; refer to the app for its own privacy behaviour.
+    </p>
+  </div>
+
+  <footer>
+    <div><p class="fwm">Bloomsbury <em>Associates</em></p><p class="ftag">Wellbeing through wealth management</p><p class="fdesc">Wellington's only CEFEX-certified financial advisory practice — serving individuals, families and charities across New Zealand since 2009.</p></div>
+    <div class="fn-signup">
+      <p class="fn-head">Stay Informed</p>
+      <p class="fn-sub">Get our regular insights — unsubscribe any time.</p>
+      <div class="fn-row">
+        <input class="fn-f" type="email" placeholder="Email address" />
+        <button type="button" class="fn-btn" onclick="this.textContent='✓';this.style.background='#2a6e3a';this.disabled=true">Subscribe</button>
+      </div>
+    </div>
+    <div class="fcol"><h4>What we do</h4><ul><li><a href="what-we-do.html#fp">Financial planning</a></li><li><a href="what-we-do.html#wm">Wealth management</a></li><li><a href="what-we-do.html#philanthropy">Philanthropic giving</a></li><li><a href="what-we-do.html#ethical">Ethical investing</a></li></ul></div>
+    <div class="fcol"><h4>Our clients</h4><ul><li><a href="our-clients.html">Real stories</a></li><li><a href="our-clients.html#testimonials">Testimonials</a></li><li><a href="index.html#form">Initial consultation</a></li><li><a href="contact.html#newsletter">Newsletter</a></li></ul></div>
+    <div class="fcol"><h4>Company</h4><ul><li><a href="about-us.html">About us</a></li><li><a href="about-us.html#cefex">CEFEX certification</a></li><li><a href="blog.html">Resources</a></li><li><a href="#">Disclosure statement</a></li></ul></div>
+  </footer>
+  <div class="fbot"><p>© Bloomsbury Associates 2026. All rights reserved.</p><p><a href="#">Financial Advice Provider</a> · <a href="#">Disclosure Statement</a> · <a href="#">Terms &amp; Conditions</a></p></div>
+
+  <script>
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (x) {
+        if (x.isIntersecting) {
+          x.target.classList.add('vis');
+          obs.unobserve(x.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.fade').forEach(function (el) { obs.observe(el); });
+  </script>
+  <script>
+    function toggleNav(btn) {
+      btn.classList.toggle('open');
+      var drawer = document.getElementById('ndrawer');
+      drawer.classList.toggle('open');
+      document.body.style.overflow = btn.classList.contains('open') ? 'hidden' : '';
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.ndrawer a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var btn = document.querySelector('.ham');
+          if (btn) btn.classList.remove('open');
+          var drawer = document.getElementById('ndrawer');
+          if (drawer) drawer.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
