@@ -38,9 +38,17 @@ nav{background:var(--bd);padding:0 56px;display:flex;align-items:center;justify-
 .hnote{margin-top:14px;font-size:12px;color:rgba(255,255,255,.28)}
 
 /* SAMPLE REPORT PREVIEW IMAGE */
-.bc-preview{position:relative;border-radius:3px;overflow:hidden;border:.5px solid rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(0,0,0,.35);align-self:center}
-.bc-preview img{width:100%;height:auto;display:block;vertical-align:top}
+.bc-preview{position:relative;border-radius:3px;overflow:hidden;border:.5px solid rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(0,0,0,.35);align-self:center;width:80%;max-width:460px;justify-self:center}
+.bc-preview-stage{position:relative}
+.bc-preview-page{width:100%;height:auto;display:block;vertical-align:top}
+.bc-preview-page--contents{position:relative;z-index:1}
+.bc-preview-page--cover{position:absolute;inset:0;z-index:2;transition:transform .55s ease,opacity .55s ease}
+.bc-preview:hover .bc-preview-page--cover{transform:translateX(24%) rotate(1deg) scale(.985);opacity:.78}
 .bc-preview-badge{position:absolute;top:12px;right:12px;font-size:9px;font-weight:500;letter-spacing:.12em;color:rgba(255,255,255,.85);text-transform:uppercase;background:rgba(0,0,0,.45);padding:6px 10px;border-radius:2px;pointer-events:none}
+@media (prefers-reduced-motion: reduce){
+  .bc-preview-page--cover{transition:none}
+  .bc-preview:hover .bc-preview-page--cover{transform:none;opacity:1}
+}
 
 /* TRUST BAR */
 .tb{background:var(--bd);border-bottom:.5px solid rgba(255,255,255,.07);padding:0 72px;display:flex;align-items:center;flex-wrap:wrap}
@@ -113,6 +121,7 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
   .nm{display:none}
   .nph{display:none}
   .hero,.fsec{grid-template-columns:1fr;padding:48px 24px}
+  .bc-preview{width:75%;max-width:420px}
   .how{padding:60px 24px}
   .steps{grid-template-columns:1fr}
   footer{grid-template-columns:1fr;padding:40px 24px}
@@ -196,39 +205,31 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
   <div>
     <p class="heyebrow">Broker<em>Check</em></p>
     <div class="heyebrow-rule"></div>
-    <p class="htag">Get your free personalised report from Bloomsbury's experienced advisers and fiduciaries</p>
-    <h1 class="hh1">How good is your broker?</h1>
-    <p class="hsub">Sharebrokers earn from buying and selling securities. That creates a structural incentive to trade more, concentrate in local securities, and avoid tax-efficient PIE funds. <strong>BrokerCheck</strong> is a free, independent review from Bloomsbury Associates that analyses your portfolio and tells you what's actually going on.</p>
+    <p class="htag">Get your free personalised report from Bloomsbury's experienced advisers and accredited fiduciaries</p>
+    <h1 class="hh1">Is your portfolio designed around your goals, or your broker's?</h1>
+    <p class="hsub">Your sharebroker earns from buying and selling securities. This creates a structural incentive to trade more, concentrate in local securities, and avoid tax-efficient PIE funds. <strong>Bloomsbury's BrokerCheck</strong> is a free, tailored analysis of your broker portfolio from Bloomsbury's independent accredited fiduciaries.</p>
     <a href="#form" class="bp">Get your free broker check</a>
-    <p class="hnote">Free. Findings personalised for your portfolio. No obligation to act on our analysis</p>
+    <p class="hnote">100% free. No appointment needed. No obligation to act on our analysis. Findings personalised to your portfolio.</p>
   </div>
 
   <div class="bc-preview">
-    <span class="bc-preview-badge">SAMPLE report preview</span>
-    <img src="BrokerCheck%20Demo%20Image.png" alt="SAMPLE: BrokerCheck portfolio statement analysis — illustrative report layout" width="1600" height="900" loading="lazy" decoding="async" />
+    <span class="bc-preview-badge">Report Preview</span>
+    <div class="bc-preview-stage">
+      <img class="bc-preview-page bc-preview-page--contents" src="Contents%20Page%20Demo.png" alt="BrokerCheck contents page preview showing key findings and structure" width="563" height="794" loading="lazy" decoding="async" />
+      <img class="bc-preview-page bc-preview-page--cover" src="Cover%20Page%20Demo.png" alt="BrokerCheck cover page preview for portfolio statement analysis" width="567" height="797" loading="lazy" decoding="async" />
+    </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="tb">
-  <div class="ti"><span class="ti-dot"></span>100% free — no fee, no obligation</div>
-  <div class="ti"><span class="ti-dot"></span>In-depth analysis written specifically for you</div>
-  <div class="ti"><span class="ti-dot"></span>Full detailed review within 2–3 weeks</div>
-  <div class="ti"><span class="ti-dot"></span>We do not take commission from any sharebroking firm</div>
-  <div class="ti"><span class="ti-dot"></span>Bloomsbury’s certified fiduciaries act in your best interest</div>
-</div>
-
 <!-- HOW IT WORKS -->
 <section class="how fade" id="how">
-  <div class="sl">How it works</div>
-  <h2 class="sh2">Simple. <em>Upload it.</em><br>We'll tell you what we find.</h2>
-  <p class="slead">Bloomsbury’s BrokerCheck is straightforward. No meetings, no lengthy questionnaires. All we need is your portfolio statement - Our qualified advisers and accredited investment fiduciaries will tell you where you can make improvements.</p>
+  <h2 class="sh2">How It <em>Works</em>.</h2>
+  <p class="slead">Bloomsbury’s BrokerCheck is straightforward. No meetings, no lengthy questionnaires. All we need is your portfolio statement - Our qualified advisers and accredited investment fiduciaries will take care of the rest.</p>
   <div class="steps">
     <div class="step">
       <div class="step-num">01</div>
       <div class="step-title">Upload your portfolio statement</div>
-      <p class="step-body">Provide a recent PDF statement from your broker. We’ll need your name, and for you to sign a brief scope of engagement. Simple.</p>
-      <span class="step-tag">Two minutes, that's it</span>
+      <p class="step-body">No in-person appointment needed. Just provide a recent PDF statement from your broker. We’ll need your name, and for you to sign a brief scope of engagement.</p>
     </div>
     <div class="step">
       <div class="step-num">02</div>
@@ -239,13 +240,13 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-title">You get a straight answer</div>
-      <p class="step-body">We email you a detailed, jargon-free report with our findings. We'll tell you what's working, what isn't, and what a better structure might look like.</p>
+      <p class="step-body">We email you a clear, plain-English report with our findings. We'll tell you what's working, what isn't, and what a better structure might look like.</p>
       <span class="step-tag">Straight to your inbox</span>
     </div>
   </div>
   <div class="timeline-note">
     <div class="timeline-note-icon">🕐</div>
-    <p><strong>Bloomsbury will provide its report within 2–3 weeks.</strong> We read every portfolio ourselves and don't use automated tools. Our review is based on what's in the statement you provide; we'll note where our observations are limited by the information available, and where we'd want more data to draw stronger conclusions.</p>
+    <p><strong>Bloomsbury will provide its report within 2–3 weeks.</strong> We read every portfolio ourselves and don't use automated tools. Our review is based on information you provide; we'll note where our observations are limited by the information available, and where we need more information to draw a conclusion.</p>
   </div>
 </section>
 
@@ -260,6 +261,7 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
       <li>Specific to NZ tax law and the NZ investment landscape</li>
       <li>Free, detailed analysis - tailored for you</li>
       <li>No obligation now or in the future</li>
+	<li>Plain-English report </li>
     </ul>
     <div class="contact-info">Level 9, Bayleys Building · 36 Brandon Street, Wellington 6011<br>
     <a href="tel:+6444996979">+64 4 499 6979</a> · <a href="/cdn-cgi/l/email-protection#385d56494d514a515d4b785a545757554b5a4d4a41165b57165642"><span class="__cf_email__" data-cfemail="57323926223e253e322417353b38383a243522252e79343879392d">[email&#160;protected]</span></a></div>
