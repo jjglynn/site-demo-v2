@@ -60,7 +60,6 @@ nav{background:var(--bd);padding:0 56px;display:flex;align-items:center;justify-
 .cefex-body p strong{color:rgba(255,255,255,.85);font-weight:500}
 .cefex-logo{margin-top:24px;display:flex;align-items:center;gap:20px}
 .cefex-logo img{height:70px;opacity:.9}
-.cefex-badge{display:inline-block;background:rgba(240,90,26,.12);border:.5px solid rgba(240,90,26,.35);color:#fdd0bc;font-size:11px;padding:8px 16px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase}
 .cpillars{display:flex;flex-direction:column;gap:2px}
 .cp{background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);padding:26px 28px}
 .cp h4{font-family:var(--serif);font-size:19px;font-weight:500;color:#fff;margin-bottom:7px}
@@ -124,8 +123,11 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
 .ceflist{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:11px}
 .ceflist li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--gt);line-height:1.65}
 .ceflist li::before{content:'';width:6px;height:6px;background:var(--or);border-radius:50%;margin-top:7px;flex-shrink:0}
-.aaf-aifnote{font-size:13px;color:var(--gt);line-height:1.75;margin-top:18px;padding-top:18px;border-top:.5px solid var(--bl)}
+.aaf-aifnote{font-size:13px;color:var(--gt);line-height:1.75}
 .aaf-aifnote strong{color:var(--ink);font-weight:500}
+.aaf-aifcefex{display:flex;align-items:center;gap:20px 28px;margin-top:18px;padding-top:18px;border-top:.5px solid var(--bl);flex-wrap:wrap}
+.aaf-aifcefex .aaf-aifnote{flex:1;min-width:min(100%,220px);margin:0}
+.aaf-aifcefex .cefex-logo{margin-top:0;flex-shrink:0}
 </style>
 <link rel="stylesheet" href="responsive.css">
 </head>
@@ -296,10 +298,11 @@ footer{background:#0f1628;padding:60px 72px 44px;display:grid;grid-template-colu
       <h3>Accredited Investment Fiduciary <em>(AIF©)</em></h3>
       <p>The Accredited Investment Fiduciary© designation recognises specialised knowledge of fiduciary standards and their application to investment management.</p>
       <p><strong>Philip Stevenson</strong> and <strong>Lauren Teague</strong> hold the AIF© designation — a credential for fiduciary excellence held by relatively few advisers in New Zealand.</p>
-      <p class="aaf-aifnote">AIF© complements our CEFEX certification: together they reflect how we think about stewardship of client assets — not as a label we give ourselves, but as standards we maintain through training, process, and external scrutiny.</p>
-      <div class="cefex-logo" style="margin-top:28px">
-        <img src="https://bloomsbury.co.nz/resources/img/associates/CEFEX-Mark2.png" alt="CEFEX certification mark" style="height:64px">
-        <span class="cefex-badge" style="background:rgba(240,90,26,.1);border-color:rgba(240,90,26,.25);color:var(--od)">Annual CEFEX audit</span>
+      <div class="aaf-aifcefex">
+        <p class="aaf-aifnote">AIF© complements our CEFEX certification: together they reflect how we think about stewardship of client assets — not as a label we give ourselves, but as standards we maintain through training, process, and external scrutiny.</p>
+        <div class="cefex-logo">
+          <img src="https://bloomsbury.co.nz/resources/img/associates/CEFEX-Mark2.png" alt="CEFEX certification mark" style="height:64px">
+        </div>
       </div>
     </div>
   </div>
