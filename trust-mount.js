@@ -5,10 +5,17 @@
   var mounts = document.querySelectorAll('[data-bb-trust-mount]');
   if (!mounts.length) return;
 
-  var aside =
+  var asideDefault =
     '<aside class="bb-disclaimer bb-disclaimer--legal" role="note">' +
     '<strong>Important:</strong> Illustrative outputs only — not personalised financial advice or a product recommendation. For advice on your situation, contact Bloomsbury Associates.' +
-    '</aside>' +
+    '</aside>';
+
+  var asideLongevity =
+    '<aside class="bb-disclaimer bb-disclaimer--legal" role="note">' +
+    '<strong>Important:</strong> Illustrative outputs only - this tool uses birth year, age, and gender to estimate the additional years of life expectancy using Statistics New Zealand cohort life expectancy tables. This is not personalised advice and is an educational tool only.' +
+    '</aside>';
+
+  var footer =
     '<footer class="bb-model-foot" role="contentinfo">' +
     '<img class="bb-foot-icon" src="icon.jpg" alt="" width="40" height="40" decoding="async" />' +
     '<span class="bb-model-foot__text">' +
@@ -19,6 +26,8 @@
     '</footer>';
 
   mounts.forEach(function (el) {
-    el.innerHTML = aside;
+    var aside =
+      el.getAttribute('data-bb-trust-variant') === 'longevity' ? asideLongevity : asideDefault;
+    el.innerHTML = aside + footer;
   });
 })();
